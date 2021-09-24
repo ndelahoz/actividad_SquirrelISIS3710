@@ -1,0 +1,54 @@
+.leftmenu{
+    background-color: orange;
+    font-weight: bold;
+}
+
+.topmenu{
+    background-color: chocolate;
+    text-align:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.prob{
+    background-color: palevioletred;
+    font-weight: bold;
+}
+
+.prob2{
+    background-color: lightblue;
+    font-weight: bold;
+}
+
+.mainContent{
+    height: 10em;
+    text-align:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    background-color: gainsboro;
+}
+
+.banner{
+    height: 5em;
+    background-color: #412B15;
+    color: white;
+    text-align:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.footer{
+    background-color: #412B15;
+    color: white;
+    text-align:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
