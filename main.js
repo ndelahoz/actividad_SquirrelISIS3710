@@ -101,10 +101,9 @@ function CreateTableCorrelation(res){
     let MCC={};
     for(let event in dict){
         let MCCevent= CalculateMCC(dict[event]);
-        MCC[MCCevent]=event;
+        MCC[event]=MCCevent;
     }
-    let datosTabla=Object.keys(MCC).sort((a,b)=>b-a);
-
+    let datosTabla=Object.values(MCC).sort((a,b)=>b-a);
     //Creamos la tabla ahora en orden
     // CREATE DYNAMIC TABLE.
     let table = document.createElement("table");
@@ -120,7 +119,6 @@ function CreateTableCorrelation(res){
         th.innerHTML = col[i];
         tr.appendChild(th);
     }
-    
     // ADD JSON DATA TO THE TABLE AS ROWS.
     for (let i = 0; i < datosTabla.length; i++) {
     
@@ -132,8 +130,10 @@ function CreateTableCorrelation(res){
             if(j==0){
                 tabCell.innerHTML = i+1;
             }else if(j==1){
-                tabCell.innerHTML = MCC[datosTabla[i]];
+                tabCell.innerHTML =Object.keys(MCC).find(key => MCC[key] === datosTabla[i]);
+                delete MCC[tabCell.innerHTML];
                 tabCell.className="col-8";
+                
             }else{
                 tabCell.innerHTML =datosTabla[i];
             }
